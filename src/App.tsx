@@ -11,9 +11,10 @@ import UserIcon from "@mui/icons-material/Group";
 import { dataProvider } from "./dataProvider";
 import { UserList } from "./users";
 import { PostList, PostEdit, PostCreate } from "./posts";
+import { Dashboard } from "./Dashboard";
 
 export const App = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin dataProvider={dataProvider} dashboard={Dashboard}>
     <Resource
       name="posts"
       icon={PostIcon}
