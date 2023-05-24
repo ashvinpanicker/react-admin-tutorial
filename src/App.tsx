@@ -5,6 +5,9 @@ import {
   EditGuesser,
   ShowGuesser,
 } from "react-admin";
+import PostIcon from "@mui/icons-material/Book";
+import UserIcon from "@mui/icons-material/Group";
+
 import { dataProvider } from "./dataProvider";
 import { UserList } from "./users";
 import { PostList, PostEdit, PostCreate } from "./posts";
@@ -13,10 +16,16 @@ export const App = () => (
   <Admin dataProvider={dataProvider}>
     <Resource
       name="posts"
+      icon={PostIcon}
       list={PostList}
       edit={PostEdit}
       create={PostCreate}
     />
-    <Resource name="users" list={UserList} recordRepresentation="name" />
+    <Resource
+      name="users"
+      icon={UserIcon}
+      list={UserList}
+      recordRepresentation="name"
+    />
   </Admin>
 );
